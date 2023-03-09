@@ -10,35 +10,50 @@
     <title>Good News</title>
     <!--link to the css file-->
     <link rel="stylesheet" href="css/style.css">
+    <!--Font awesome icons link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <!--the nav and hero page container-->
     <div class="flex flex-col justify-between">
         <!--the navigation bar-->
-        <nav class="sticky top-24 flex justify-between bg-greener lg:bg-grayish">
+        <nav class="sticky top-24 flex gap-40 bg-greener ">
             <!--logo-->
             <div class="p-4 md:p-4 lg:p-4 lg:bg-logoBg">
-                <h1 class="text-xl font-bold text-white md:text-2xl lg:text-4xl">Good News</h1>
+                <h1 class="text-xl font-bold text-white md:text-2xl lg:text-2xl">Good News</h1>
             </div>
-            <!--navigation links-->
-            <div class="flex flex-col justify-between">
+            <!--navigation links and menu icons container-->
+            <div class="flex flex-col justify-between lg:flex-row gap-40">
                 <!--nav list and close button container-->
-                <div class="fixed top-2 left-14 w-full flex flex-col pt-32">
+                <div class="hidden fixed top-0 left-0 w-full h-screen flex flex-col pt-40 bg-greener animate__bounceInRight lg:relative lg:block lg:pt-4 lg:h-auto">
                     <!--the close button-->
-                    <div class="absolute top-3 left-64" onclick="closeNav()">
+                    <div class="absolute top-3 left-64 lg:hidden" onclick="closeNav()">
                         <img src="img/assets/close.png" alt="close">
                     </div>
                     <!--nav lists-->
-                    <div class="flex flex-col gap-8">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Product <img src="img/assets/expand.png" alt=""></a></li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Contact</a></li>
+                    <div class="flex flex-col gap-8 pl-24 list-none lg:flex-row lg:pl-0 lg:pt-2">
+                        <li class="text-3xl lg:text-xl"><a href="#">Home</a></li>
+                        <li class="text-3xl lg:text-xl"><a href="#">Services</a></li>
+                        <li class="text-3xl flex lg:text-xl item-center"><a href="#">Product </a><img src="img/assets/expand.png" alt=""></li>
+                        <li class="text-3xl lg:text-xl"><a href="#">About us</a></li>
+                        <li class="text-3xl lg:text-xl"><a href="#">Contact</a></li>
+                        <!--fa fa icons-->
+                        <div class="flex gap-6 pt-12 lg:hidden">
+                            <i class="fa fa-facebook" style="color: #ffffff; font-size:28px;"></i>
+                            <i class="fa fa-twitter" style="color: #ffffff; font-size:28px;"></i>
+                            <i class="fa fa-instagram" style="color: #ffffff; font-size:28px;"></i>
+                            <i class="fa fa-google" style="color: #ffffff; font-size:28px;"></i>
+                            <i class="fa fa-whatsapp" style="color: #ffffff; font-size:28px;"></i>
+
+                        </div>
                     </div>
                 </div>
+                <!--started button-->
+                <div class="hidden lg:block">
+                    <button class="p-2 bg-greener text-white border-solid border-white border-2 rounded-xl mt-4" >GetStarted</button>
+                </div>
                 <!--mobile menu icon-->
-                <div class="p-2" onclick="openNav()">
+                <div class="p-2 lg:hidden" onclick="openNav()">
                     <img src="img/assets/menu.png" alt="menu">
                 </div>
             </div>
