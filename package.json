@@ -1,0 +1,6 @@
+{"scripts":{
+    "build":"tailwindcss -i ./input.css -o ./css/style.css",
+    "watch": "tailwindcss -i ./input.css -o ./css/style.css --watch"
+},
+"devDependencies":{"tailwindcss":"^3.2.7"},"dependencies":{"animate.css":"^4.1.1"}}
+
