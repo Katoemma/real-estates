@@ -8,7 +8,16 @@ module.exports = {
       'lg' : '1024px',
       'xl' : '1280'
     },
-    extend: {},
+    colors : {
+      'greener': '#2d862d',
+      'white' : '#ffffff',
+      'grayish': '#efefef',
+    },
+    extend: {
+      backgroundImage: {
+        'logoBg': "url('img/assets/logoBg.jpg')",
+      }
+    },
   },
   plugins: [],
 }
