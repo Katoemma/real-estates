@@ -17,28 +17,28 @@
     <!--the nav and hero page container-->
     <div class="flex flex-col justify-between">
         <!--the navigation bar-->
-        <nav class="sticky top-24 flex gap-40 bg-greener ">
+        <nav class="sticky top-24 flex justify-between bg-greener ">
             <!--logo-->
-            <div class="p-4 md:p-4 lg:p-4 lg:bg-logoBg">
-                <h1 class="text-xl font-bold text-white md:text-2xl lg:text-2xl">Good News</h1>
+            <div class="p-4 sm:p-4 md:p-4 md:bg-logoBg">
+                <h1 class="text-xl font-bold text-white md:text-2xl md:text-2xl">Good News</h1>
             </div>
             <!--navigation links and menu icons container-->
-            <div class="flex flex-col justify-between lg:flex-row gap-40">
+            <div class="flex flex-col justify-between md:flex-row gap-40 md:mr-16">
                 <!--nav list and close button container-->
-                <div class="hidden fixed top-0 left-0 w-full h-screen flex flex-col pt-40 bg-greener animate__bounceInRight lg:relative lg:block lg:pt-4 lg:h-auto">
+                <div class="hidden fixed top-0 left-0 w-full h-screen flex flex-col pt-40 bg-greener animate__bounceInRight md:relative md:block md:pt-4 md:h-auto" id="navigation">
                     <!--the close button-->
-                    <div class="absolute top-3 left-64 lg:hidden" onclick="closeNav()">
+                    <div class="absolute top-3 left-64 md:hidden" onclick="closeNav()">
                         <img src="img/assets/close.png" alt="close">
                     </div>
                     <!--nav lists-->
-                    <div class="flex flex-col gap-8 pl-24 list-none lg:flex-row lg:pl-0 lg:pt-2">
-                        <li class="text-3xl lg:text-xl"><a href="#">Home</a></li>
-                        <li class="text-3xl lg:text-xl"><a href="#">Services</a></li>
-                        <li class="text-3xl flex lg:text-xl item-center"><a href="#">Product </a><img src="img/assets/expand.png" alt=""></li>
-                        <li class="text-3xl lg:text-xl"><a href="#">About us</a></li>
-                        <li class="text-3xl lg:text-xl"><a href="#">Contact</a></li>
+                    <div class="flex flex-col gap-8 pl-24 list-none md:flex-row md:pl-0 md:pt-2">
+                        <li class="text-3xl md:text-xl"><a href="#">Home</a></li>
+                        <li class="text-3xl md:text-xl"><a href="#">Services</a></li>
+                        <li class="text-3xl flex md:text-xl item-center"><a href="#">Product </a><img src="img/assets/expand.png" alt=""></li>
+                        <li class="text-3xl md:text-xl"><a href="#">About us</a></li>
+                        <li class="text-3xl md:text-xl"><a href="#">Contact</a></li>
                         <!--fa fa icons-->
-                        <div class="flex gap-6 pt-12 lg:hidden">
+                        <div class="flex gap-6 pt-12 md:hidden">
                             <i class="fa fa-facebook" style="color: #ffffff; font-size:28px;"></i>
                             <i class="fa fa-twitter" style="color: #ffffff; font-size:28px;"></i>
                             <i class="fa fa-instagram" style="color: #ffffff; font-size:28px;"></i>
@@ -49,14 +49,22 @@
                     </div>
                 </div>
                 <!--started button-->
-                <div class="hidden lg:block">
+                <div class="hidden md:block">
                     <button class="p-2 bg-greener text-white border-solid border-white border-2 rounded-xl mt-4" >GetStarted</button>
                 </div>
                 <!--mobile menu icon-->
-                <div class="p-2 lg:hidden" onclick="openNav()">
+                <div class="p-2 md:hidden" onclick="openNav()">
                     <img src="img/assets/menu.png" alt="menu">
                 </div>
             </div>
+            <script>
+                function openNav(){
+                    document.getElementById("navigation").style.display = "block";
+                }
+                function closeNav(){
+                    document.getElementById("navigation").style.display = "none";
+                }
+            </script>
         </nav>
     </div>
     
