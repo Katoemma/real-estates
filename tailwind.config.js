@@ -3,9 +3,9 @@ module.exports = {
   content: ['./*.html'],
   theme: {
     screens: {
-      'sm' : '376px' ,
-      'md' : '768px',
-      'lg' : '1024px',
+      'sm' : '768px' ,
+      'md' : '1024px',
+      'lg' : '1280px',
       'xl' : '1280'
     },
     colors : {
