@@ -17,7 +17,7 @@
     <!--the nav and hero page container-->
     <div class="flex flex-col justify-between">
         <!--the navigation bar-->
-        <nav class="sticky top-24 flex justify-between bg-greener ">
+        <nav class="sticky top-0 left-0 flex justify-between bg-greener md:mt-8 ">
             <!--logo-->
             <div class="p-4 sm:p-4 md:p-4 md:bg-logoBg">
                 <h1 class="text-xl font-bold text-white md:text-2xl md:text-2xl">Good News</h1>
@@ -57,16 +57,18 @@
                     <img src="img/assets/menu.png" alt="menu">
                 </div>
             </div>
+            <!--script to run the menu icon-->
             <script>
+                //script to open the mobile menu
                 function openNav(){
                     document.getElementById("navigation").style.display = "block";
                 }
+                //script to close the mobile menu 
                 function closeNav(){
                     document.getElementById("navigation").style.display = "none";
                 }
             </script>
         </nav>
     </div>
-    
 </body>
 </html>
