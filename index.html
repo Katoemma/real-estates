@@ -10,6 +10,7 @@
     <title>Good News</title>
     <!--link to the css file-->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <!--Font awesome icons link-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -17,15 +18,15 @@
     <!--the nav and hero page container-->
     <div class="flex flex-col justify-between">
         <!--the navigation bar-->
-        <nav class="sticky top-0 left-0 flex justify-between bg-greener md:mt-8 ">
+        <nav class="sticky top-0 left-0 flex justify-between bg-greener md:mt-8 md:bg-white ">
             <!--logo-->
-            <div class="p-4 sm:p-4 md:p-4 md:bg-logoBg">
+            <div class="p-4 sm:p-4 md:p-4 md:bg-logoBg" id="logoBG">
                 <h1 class="text-xl font-bold text-white md:text-2xl md:text-2xl">Good News</h1>
             </div>
             <!--navigation links and menu icons container-->
             <div class="flex flex-col justify-between md:flex-row gap-40 md:mr-16">
                 <!--nav list and close button container-->
-                <div class="hidden fixed top-0 left-0 w-full h-screen flex flex-col pt-40 bg-greener animate__bounceInRight md:relative md:block md:pt-4 md:h-auto" id="navigation">
+                <div class="hidden fixed top-0 left-0 w-full h-screen flex flex-col pt-40 bg-greener animate__bounceInRight md:relative md:block md:pt-4 md:h-auto md:bg-white" id="navigation">
                     <!--the close button-->
                     <div class="absolute top-3 left-64 md:hidden" onclick="closeNav()">
                         <img src="img/assets/close.png" alt="close">
@@ -38,7 +39,7 @@
                         <li class="text-3xl md:text-xl"><a href="#">About us</a></li>
                         <li class="text-3xl md:text-xl"><a href="#">Contact</a></li>
                         <!--fa fa icons-->
-                        <div class="flex gap-6 pt-12 md:hidden">
+                        <div class="flex gap-6 pt-12 md:hidden text-center">
                             <i class="fa fa-facebook" style="color: #ffffff; font-size:28px;"></i>
                             <i class="fa fa-twitter" style="color: #ffffff; font-size:28px;"></i>
                             <i class="fa fa-instagram" style="color: #ffffff; font-size:28px;"></i>
@@ -58,17 +59,60 @@
                 </div>
             </div>
             <!--script to run the menu icon-->
+        </nav>
+        <!--navigation script-->
+        <script>
+            //script to open the mobile menu
+            function openNav(){
+                document.getElementById("navigation").style.display = "block";
+            }
+            //script to close the mobile menu 
+            function closeNav(){
+                document.getElementById("navigation").style.display = "none";
+            }
+        </script>
+        <!--the hero page-->
+        <div class="flex md:mt-0">
+            <!--hero Text -->
+            <div class="flex flex-col justify-between text-center p-8 items-center md:w-6/12" id="heroPage" style="background-repeat: no-repeat; background-size: cover; ">
+                <h1 class="text-5xl font-bold mt-24 mb-24 text-black">
+                    Making Your Real Estate Dreams a reality
+                </h1>
+                <!--get started buton-->
+                <button class="p-4 bg-greener w-40"><a class="text-md font-bold text-white" href="#">GET STARTED</a></button>
+            </div>
+            <!--script for changing mobile hero backgorund-->
             <script>
-                //script to open the mobile menu
-                function openNav(){
-                    document.getElementById("navigation").style.display = "block";
-                }
-                //script to close the mobile menu 
-                function closeNav(){
-                    document.getElementById("navigation").style.display = "none";
+                var backgroundIndex = 0;
+                //calling the images from the folders
+                var backgrounds = ['img/hero-house.jpg', 'img/mobiles/house-1.jpg', 'img/mobiles/house-2.jpg']
+
+                smallimg();
+                //declaring a function to be executed
+                function smallimg(){
+                    var smallBackground = document.getElementById("heroPage");
+                    smallBackground.style.backgroundImage = "url('"+backgrounds[backgroundIndex] +"')";
+                    backgroundIndex++;
+                    //if the last image is displayed, then the first image is redisplayed
+                    if (backgroundIndex == backgrounds.length){
+                        backgroundIndex = 0;
+                    }
+                    //timeout for the animation
+                    setTimeout(smallimg, 5000);
                 }
             </script>
-        </nav>
+            <!-- destop hero images-->
+            <div class="hidden flex md:block">
+                <h1>Hello</h1>
+            </div>
+        </div>
     </div>
+    <h1>hello</h1>
+    <h1>hello</h1>
+    <h1>hello</h1>
+    <h1>hello</h1>
+    <h1>hello</h1>
+    <h1>hello</h1>
+    <h1>hello</h1>
 </body>
 </html>
