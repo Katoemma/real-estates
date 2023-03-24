@@ -13,79 +13,116 @@
     <link rel="stylesheet" href="css/responsive.css">
     <!--Font awesome icons link-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--animate.css cdn-->
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    --><link rel="stylesheet" href="css/animate.css">
 </head>
 <body>
-    <!--the nav and hero page container-->
-    <div class="flex flex-col justify-between">
-        <!--the navigation bar-->
-        <nav class="sticky top-0 left-0 flex justify-between bg-greener md:mt-8 md:bg-white ">
-            <!--logo-->
-            <div class="p-4 sm:p-4 md:p-4 md:bg-logoBg" id="logoBG">
-                <h1 class="text-xl font-bold text-white md:text-2xl md:text-2xl">Good News</h1>
-            </div>
-            <!--navigation links and menu icons container-->
-            <div class="flex flex-col justify-between md:flex-row gap-40 md:mr-16">
-                <!--nav list and close button container-->
-                <div class="hidden fixed top-0 left-0 w-full h-screen flex flex-col pt-40 bg-greener animate__bounceInRight md:relative md:block md:pt-4 md:h-auto md:bg-white" id="navigation">
-                    <!--the close button-->
-                    <div class="absolute top-3 left-64 md:hidden" onclick="closeNav()">
-                        <img src="img/assets/close.png" alt="close">
-                    </div>
-                    <!--nav lists-->
-                    <div class="flex flex-col gap-8 pl-24 list-none md:flex-row md:pl-0 md:pt-2">
-                        <li class="text-3xl md:text-xl"><a href="#">Home</a></li>
-                        <li class="text-3xl md:text-xl"><a href="#">Services</a></li>
-                        <li class="text-3xl flex md:text-xl item-center"><a href="#">Product </a><img src="img/assets/expand.png" alt=""></li>
-                        <li class="text-3xl md:text-xl"><a href="#">About us</a></li>
-                        <li class="text-3xl md:text-xl"><a href="#">Contact</a></li>
-                        <!--fa fa icons-->
-                        <div class="flex gap-6 pt-12 md:hidden text-center">
-                            <i class="fa fa-facebook" style="color: #ffffff; font-size:28px;"></i>
-                            <i class="fa fa-twitter" style="color: #ffffff; font-size:28px;"></i>
-                            <i class="fa fa-instagram" style="color: #ffffff; font-size:28px;"></i>
-                            <i class="fa fa-google" style="color: #ffffff; font-size:28px;"></i>
-                            <i class="fa fa-whatsapp" style="color: #ffffff; font-size:28px;"></i>
+    <!--the navigation bar-->
+    <nav class="animate__animated animate__backInDown animate__slower sticky top-0 left-0 z-10 flex justify-between bg-greener md:bg-white md:border-2 md:border-greener md:opacity-90 ">
+        <!--logo-->
+        <div class="p-4 bg-greener sm:p-4 md:p-4 md:bg-logoBg" id="logoBG">
+            <a href="#"><img class="h-12 w-36" src="img/logo.png" alt="goodnews logo"></a>
+        </div>
+        <!--navigation links and menu icons container-->
+        <div class="flex flex-col justify-between md:flex-row gap-40 md:mr-16">
+            <!--nav list and close button container-->
+            <div class="hidden fixed top-0 left-0 w-full h-screen flex z-20 flex-col pt-40 bg-greener animate__bounceInRight md:relative md:block md:pt-4 md:h-auto md:bg-white" id="navigation">
+                <!--the close button-->
+                <div class="absolute top-3 left-64 md:hidden" onclick="closeNav()">
+                    <img src="img/assets/close.png" alt="close">
+                </div>
+                <!--nav lists-->
+                <div class="flex flex-col gap-8 pl-24 list-none md:flex-row md:pl-0 md:pt-2">
+                    <li class="text-3xl md:text-xl"><a href="#">Home</a></li>
+                    <li class="text-3xl md:text-xl"><a href="#">Services</a></li>
+                    <li class="text-3xl flex md:text-xl item-center"><a href="#">Product </a><img src="img/assets/expand.png" alt=""></li>
+                    <li class="text-3xl md:text-xl"><a href="#">About us</a></li>
+                    <li class="text-3xl md:text-xl"><a href="#">Contact</a></li>
+                    <!--fa fa icons-->
+                    <div class="flex gap-6 pt-12 md:hidden text-center">
+                        <i class="fa fa-facebook" style="color: #ffffff; font-size:28px;"></i>
+                        <i class="fa fa-twitter" style="color: #ffffff; font-size:28px;"></i>
+                        <i class="fa fa-instagram" style="color: #ffffff; font-size:28px;"></i>
+                        <i class="fa fa-google" style="color: #ffffff; font-size:28px;"></i>
+                        <i class="fa fa-whatsapp" style="color: #ffffff; font-size:28px;"></i>
 
-                        </div>
                     </div>
                 </div>
-                <!--started button-->
-                <div class="hidden md:block">
-                    <button class="p-2 bg-greener text-white border-solid border-white border-2 rounded-xl mt-4" >GetStarted</button>
-                </div>
-                <!--mobile menu icon-->
-                <div class="p-2 md:hidden" onclick="openNav()">
-                    <img src="img/assets/menu.png" alt="menu">
-                </div>
             </div>
-            <!--script to run the menu icon-->
-        </nav>
-        <!--navigation script-->
-        <script>
-            //script to open the mobile menu
-            function openNav(){
-                document.getElementById("navigation").style.display = "block";
-            }
-            //script to close the mobile menu 
-            function closeNav(){
-                document.getElementById("navigation").style.display = "none";
-            }
-        </script>
-        <!--the hero page-->
-        <div class="flex md:mt-0">
-            <!--hero Text -->
-            <div class="flex flex-col justify-between text-center p-8 items-center md:w-6/12" id="heroPage" style="background-repeat: no-repeat; background-size: cover; ">
-                <h1 class="text-5xl font-bold mt-24 mb-24 text-black">
-                    Making Your Real Estate Dreams a reality
+            <!--started button-->
+            <div class="hidden md:block">
+                <button class="p-2 bg-greener text-white border-solid border-white border-2 rounded-xl mt-4" >GetStarted</button>
+            </div>
+            <!--mobile menu icon-->
+            <div class="p-2 md:hidden" onclick="openNav()">
+                <img src="img/assets/menu.png" alt="menu">
+            </div>
+        </div>
+        <!--script to run the menu icon-->
+    </nav>
+    <!--the hero page-->
+    <div class="wow fadeInLeft flex bg-no-repeat bg-cover md:mt-0" style="transition:background-image 3s step-start " id="heroPage">
+         <!--hero Text -->
+        <div class="flex flex-col  text-center md:text-left p-8 items-center   md:w-full   md:w-full md:h-screen " style="background-color: rgba(0, 0, 0, 0.55);" id="heroPage">
+            <h1 class="text-5xl font-bold mt-24 mb-24 text-black md:text-7xl md:text-white md:self-start md:w-6/12 xl:text-8xl">
+                Making Your Real Estate Dreams a reality
+            </h1>
+            <p class="text-2xl text-white md:w-6/12 md:self-start md:mb-16 lg:text-3xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolorem, non perspiciatis at maiores minus laborum beatae expedita blanditiis harum pariatur laudantium hic dolor tenetur accusamus ratione adipisci ullam! Debitis!</p>
+            <!--get started buton-->
+            <button class="p-4 bg-greener w-40 md:self-start"><a class="text-md font-bold text-white" href="#">GET STARTED</a></button>
+        </div>
+    </div>
+
+    <!--who we are container-->
+    <div class="wow fadeInUp  flex flex-col bg-grayish md:flex-row-reverse p-4" data-wow-duration="1s" data-wow-delay="2s">
+        
+        <!--who we are text-->
+        <div class="flex flex-col justify-between gap-12 pt-0 p-4 md:w-1/2">
+            <!--heading-->
+            <div class="wow fadeInDown text-center md:text-left" data-wow-delay="4s">
+                <h1 class="text-4xl font-bold text-greener">
+                    Who we are
                 </h1>
-                <!--get started buton-->
-                <button class="p-4 bg-greener w-40"><a class="text-md font-bold text-white" href="#">GET STARTED</a></button>
             </div>
-            <!--script for changing mobile hero backgorund-->
-            <script>
+            <!--who we are paragraph-->
+            <div class="wow text-center md:text-left">
+                <p>We are trustworthy real estates agents ,We buy and sell properties that include land and housing both coommercial and resdidential</p>
+                <p>We are trustworthy real estates agents ,We buy and sell properties that include land and housing both coommercial and resdidential</p>
+                <p>We are trustworthy real estates agents ,We buy and sell properties that include land and housing both coommercial and resdidential</p>
+            </div>
+            <!--read more button-->
+            <div class="self-center md:self-start">
+                <a href="#"><button class="bg-greener  px-8 py-4 text-white font-bold">Read More</button></a>
+            </div>
+        </div>
+
+        <!--about us image-->
+        <div class="w-full md:w-1/2 gap-4 bg-gradient-t0-r from-red-200 t0-green-200">
+            <img class="wow zoomIn w-80" src="img/survey.jpg"data-wow-duration="5s" data-wow-delay="4s"  alt="surveying machine">
+            <img class="wow slideInUp w-80 pt-4 md:float-right"data-wow-duration="5s" data-wow-delay="4s" src="img/survey.jpg" alt="surveying machine">
+        </div>
+    </div>
+    <!--scripts-->
+    <script src="/js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <!--navigation script-->
+    <script>
+        
+        //script to open the mobile menu
+        
+        function openNav(){
+            document.getElementById("navigation").style.display = "block";
+        }
+        //script to close the mobile menu 
+        function closeNav(){
+            document.getElementById("navigation").style.display = "none";
+        }
                 var backgroundIndex = 0;
                 //calling the images from the folders
-                var backgrounds = ['img/hero-house.jpg', 'img/mobiles/house-1.jpg', 'img/mobiles/house-2.jpg']
+                var backgrounds = ['img/hero2.jpg','img/houses/house2.jpg', 'img/houses/house1.jpeg', 'img/houses/machine.jpg']
 
                 smallimg();
                 //declaring a function to be executed
@@ -98,21 +135,9 @@
                         backgroundIndex = 0;
                     }
                     //timeout for the animation
-                    setTimeout(smallimg, 5000);
+                    setTimeout(smallimg, 6000);
                 }
-            </script>
-            <!-- destop hero images-->
-            <div class="hidden flex md:block">
-                <h1>Hello</h1>
-            </div>
-        </div>
-    </div>
-    <h1>hello</h1>
-    <h1>hello</h1>
-    <h1>hello</h1>
-    <h1>hello</h1>
-    <h1>hello</h1>
-    <h1>hello</h1>
-    <h1>hello</h1>
+    </script>
 </body>
+
 </html>

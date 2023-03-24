@@ -1,6 +1,6 @@
 @media only screen and (min-width: 768px) {
     #logoBG{
-        background-image: url(../img/assets/logoBg.jpg);
+       /* background-image: url(../img/assets/logoBg.jpg);
         background-size: cover;
     }
 }

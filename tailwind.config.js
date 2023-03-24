@@ -1,20 +1,23 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./*.html'],
+  content: ['./*.html', './*.js'],
   theme: {
     screens: {
-      'sm' : '768px' ,
-      'md' : '1024px',
-      'lg' : '1280px',
+      'sm' : '576px' ,
+      'md' : '768px',//ipads and tablets
+      'lg' : '1224px',// laptops and desktops
+      'xl' : '1824px', //large screens
     },
     colors : {
-      'greener': '#2d862d',
+      'greener': '#fc2947',//#2d862d
       'white' : '#ffffff',
       'grayish': '#efefef',
+      'black' : '#000000',
     },
     extend: {
       backgroundImage: {
-        'logoBg': "url('img/assets/logoBg.jpg')",
+        //'logoBg': "url('/img/assets/logoBg.jpg')",
+        'heroBg': "url('/img/hero2.jpg')",
       }
     },
   },
